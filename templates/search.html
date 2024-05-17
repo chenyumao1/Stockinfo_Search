@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--     <link rel="stylesheet" href="styles.css"> -->
+<!--     <link rel="stylesheet" href="../stock/static/css/styles.css">
+ -->
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/">Home Page</a> |
+        <a href="/search">News</a> |
+        <a href="/info">Info</a>
+        <div class="login-container">
+            <a href="/login">Login</a>
+        </div>
+    </nav>
+</header>
+<main>
+
+<h1 class="text-center web-title">Search Stock News</h1>
+
+
+<div class="container">
+<div class="row">
+    <div class="col-lg-12 card-margin">
+        <div class="card search-form ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row no-gutters">
+                                <div class="col-lg-3 col-md-3 col-sm-12 p-0" >
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Month</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                    <input type="text" placeholder="Type Keywords Here..." class="form-control" id="keyword" name="keyword">
+                                </div>
+                                <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                    <button type="submit" class="btn btn-base" id="search-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+    <section class="publishers">
+        <button class="publisher-btn" data-publisher="Yahoo Entertainment">Yahoo Entertainment</button>
+        <button class="publisher-btn" data-publisher="The Wall Street Journal">The Wall Street Journal</button>
+        <button class="publisher-btn" data-publisher="Business Insider">Business Insider</button>
+        <button class="publisher-btn" data-publisher="Bloomberg">Bloomberg</button>
+        <button class="publisher-btn" data-publisher="marketwatch.com">marketwatch.com</button>
+    </section>
+    <section id="news-display" class="news-container">
+    <h2 class="news-title">News</h2>
+
+        <!-- News will be displayed here -->
+    </section>
+</main>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- <script src="./script.js"></script> -->
+
+
+</body>
+</html>
